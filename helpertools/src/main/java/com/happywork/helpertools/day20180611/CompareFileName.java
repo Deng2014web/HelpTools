@@ -18,14 +18,17 @@ public class CompareFileName {
 		List<String> fileNameList1 = readFileName(args[0]);
 		List<String> fileNameList2 = readFileName(args[1]);
 		
+		compareFileNames(fileNameList1, fileNameList2);
 		
+		
+	}
+
+	private static void compareFileNames(List<String> fileNameList1, List<String> fileNameList2) {
 		for (String name : fileNameList1) {
 			if(!fileNameList2.contains(name) ) {
 				System.out.println("different file name:" + name);
 			}
 		}
-		
-		
 	}
 
 	private static List<String> readFileName(String filepath) {
